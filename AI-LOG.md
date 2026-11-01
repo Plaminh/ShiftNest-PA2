@@ -139,3 +139,17 @@
 **Rejected:** No documented AI suggestion was rejected. Additional speculative CSS changes were deferred until an implemented screen could be tested.
 
 **By hand:** Reviewed the project rules and shared CSS, applied the approved rules clarification, inspected the relevant Git changes, and managed the commit process independently.
+
+## 2026-11-01 — Screen 3: Review & Approve
+
+**Tool:** Codex 5.6 Sol (implementation and refinement assistance); W3C Nu validator and Microsoft Edge headless rendering during earlier review.
+
+**Asked for:** Implement Screen 3 from the approved revised wireframe, correct sample-state and responsive risks, then perform a final targeted refinement of header consistency, typography, and accessibility while updating the AI records.
+
+**Kept:** The approved Screen 3 structure and visual hierarchy; shared tokens and components from `styles/base.css`; semantic landmarks; relative navigation; one `h1`; accessible labeling; request `REQ-2026-8841`; sender Nguyet, receiver Hoang, and approver Minh; decision guidance; and illustrative Approve/Reject controls without backend behavior.
+
+**Changed:** Implemented the Screen 3 HTML and mobile-first CSS. Follow-up review labeled approval and availability checks as historical sample data, corrected time-sensitive wording, clarified hypothetical production validation, and strengthened narrow-screen wrapping. Final refinement added the approved “My Store” header context, retained only the three valid workflow links, made navigation labels consistent, and raised section labels, detail labels, person roles, sample notes, form hints, and status text to at least 16px through screen-specific CSS. A fresh W3C Nu check of the refined HTML returned no messages.
+
+**Rejected:** No documented rejection.
+
+**By hand:** The team leader supplied the approved reference and implementation requirements, reviewed the initial result, requested the sample-state, responsive, header, and typography refinements, and retained responsibility for staging and all Git operations. Strict UTF-8 decoding of the refined HTML found no replacement characters. Earlier headless renders covered 768px and 1280px but predate the final refinement. Reliable 360px rendering, final viewport rechecks, full-page screenshots, keyboard testing, CSS validation, and accessibility testing remain pending.
