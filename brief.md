@@ -39,6 +39,10 @@ This log distinguishes **ChatGPT-assisted setup** from instructions actually sub
 | 2026-11-01 | PROTOTYPE documentation | Codex | `PROTOTYPE.md` |
 | 2026-11-01 | Phase 1 final audit and documentation revision | Codex | Four authorized Markdown files reviewed and revised |
 | 2026-11-01 | Team leader review and project-rules clarification | ChatGPT guidance; manual VS Code/Git review | `a718c63`, `8b92f6a`; original prompt unavailable |
+| 2026-11-01 | Screen 3 implementation | Codex 5.6 Sol | `review-and-approve.html`, `styles/screen-3.css`; staged initial implementation |
+| 2026-11-01 | Screen 3 implementation review | Codex review assistance | Sample-state and responsive corrections; unstaged |
+| 2026-11-01 | Documentation update after Screen 3 | Codex | Four documentation files revised; no source changes |
+| 2026-11-01 | Screen 3 final UI refinement and documentation | Codex 5.6 Sol | Header and typography refinement; `AI-LOG.md` and `brief.md` updated |
 
 The wireframe-review and team-leader-review tasks are supported by the corresponding `AI-LOG.md` entries and Git evidence. Their original ChatGPT prompt wording is not available in the current conversation record, so no reconstructed prompt is presented as verbatim.
 
@@ -1666,18 +1670,429 @@ Finish the documentation revision and stop.
 Wait for team leader review.
 ```
 
+### 4.8 Screen 3: Review & Approve Implementation
+
+**Type:** Implementation
+
+**Scope:** Modify only `review-and-approve.html` and `styles/screen-3.css`.
+
+```text
+You are implementing Screen 3 of ShiftNest PA#2 for CSC13008.
+
+ROLE
+Act as a senior frontend engineer.
+
+READ FIRST
+
+- AGENTS.md
+- styles/base.css
+- docs/revised-wireframes/03-review-and-approve.png
+- PROTOTYPE.md
+
+OBJECTIVE
+Implement Screen 3 — Review & Approve, owned by Minh
+(Shift Leader / Approver).
+
+ALLOWED FILES
+
+- review-and-approve.html
+- styles/screen-3.css
+
+Do not modify any other files.
+
+IMPLEMENTATION REQUIREMENTS
+
+1. Reproduce the approved revised Screen 3 wireframe
+   as closely as possible.
+
+2. Use semantic HTML5 and vanilla CSS only.
+
+3. Reuse existing design tokens and shared components
+   from styles/base.css.
+
+4. Clearly identify:
+
+   - STEP 3 — Review & Approve
+   - Minh — Shift Leader / Approver
+   - Request ID: REQ-2026-8841
+   - Sender: Nguyet
+   - Receiver: Hoang
+   - Shift date: 2026-10-24
+   - Shift time: 07:00–15:30
+   - Status: Awaiting final approval
+
+5. Explain that Nguyet remains assigned until final
+   approval.
+
+6. Include the request details, decision guidance,
+   and illustrative Approve / Reject controls.
+
+7. Do not implement backend behavior, persistence,
+   fake success messages, or JavaScript-dependent
+   interactions.
+
+8. Use correct semantic landmarks, exactly one h1,
+   logical headings, accessible controls, and
+   visible focus indicators.
+
+9. Use mobile-first CSS and support:
+
+   - 360px
+   - 768px
+   - 1280px
+
+10. Avoid horizontal overflow, fixed page widths,
+    inline styles, and !important.
+
+11. Use relative HTML links for navigation.
+    The page must remain usable with JavaScript disabled.
+
+QUALITY CHECK
+
+- Inspect the HTML and CSS for obvious issues.
+- Check alignment with the revised wireframe.
+- Perform browser and W3C checks only if available.
+- Clearly mark anything not actually tested.
+
+STRICT GIT RULES
+Do not stage, commit, push, merge, switch branches,
+or modify Git configuration.
+
+OUTPUT
+
+1. List modified files.
+2. Summarize the implementation.
+3. Explain shared CSS reuse.
+4. List checks performed and pending.
+5. Identify any deviations from the wireframe.
+
+Stop after implementation for team leader review.
+```
+
+### 4.9 Screen 3 Implementation Review
+
+**Type:** Code review and correction
+
+**Scope:** Modify only the Screen 3 HTML and CSS; do not update documentation or perform Git operations.
+
+```text
+Review the current Screen 3 implementation against
+docs/revised-wireframes/03-review-and-approve.png
+and AGENTS.md.
+
+Modify ONLY:
+
+- review-and-approve.html
+- styles/screen-3.css
+
+Fix the following:
+
+1. Clearly distinguish illustrative sample approval
+   checks from actual live validation results.
+2. Avoid implying the historical 2026-10-24 sample
+   shift has not started as of the current date.
+3. Preserve the original approved wireframe content,
+   screen structure, and visual hierarchy.
+4. Check whether any text encoding issues exist in
+   the actual HTML file, not merely the Git diff.
+5. Inspect CSS for 360px, 768px, and 1280px layout
+   risks, especially header wrapping and overflow.
+
+Do not add JavaScript, backend behavior, new pages,
+or dependencies.
+
+Do not modify documentation or perform Git operations.
+Do not claim browser or W3C tests passed unless run.
+
+Report the exact changes and remaining manual checks.
+```
+
+### 4.10 Screen 3 Final UI Refinement and Documentation
+
+**Tool:** Codex 5.6 Sol
+
+**Type:** UI refinement and documentation update
+
+**Scope:** `review-and-approve.html`, `styles/screen-3.css`, `AI-LOG.md`, and `brief.md`.
+
+```text
+# ShiftNest PA#2 — Screen 3 Final Refinement and AI Documentation
+
+ROLE
+Act as a senior frontend engineer, accessibility reviewer,
+and AI-assisted development documentation maintainer.
+
+OBJECTIVE
+Perform the final targeted UI refinement of Screen 3
+and update AI-LOG.md and brief.md to accurately document
+the work performed.
+
+READ FIRST
+- AGENTS.md
+- review-and-approve.html
+- styles/base.css
+- styles/screen-3.css
+- docs/revised-wireframes/03-review-and-approve.png
+- AI-LOG.md
+- brief.md
+- PROTOTYPE.md
+- SELF_ASSESSMENT_REPORT.md
+
+Use the actual repository state and available conversation
+history as evidence.
+
+==================================================
+1. SCREEN 3 — HEADER CONSISTENCY
+==================================================
+
+Compare the implemented header with the approved
+revised Screen 3 wireframe.
+
+Improve visual consistency without breaking the
+existing three-screen navigation:
+
+- index.html
+- respond-to-request.html
+- review-and-approve.html
+
+Do not introduce links to nonexistent pages.
+
+All navigation must remain functional with
+JavaScript disabled.
+
+Maintain responsive behavior at:
+- 360px
+- 768px
+- 1280px
+
+Do not redesign or rebuild the page.
+
+==================================================
+2. TYPOGRAPHY AND ACCESSIBILITY
+==================================================
+
+Review and refine:
+- Section labels
+- Detail labels
+- Person role labels
+- Sample notes
+- Form hints
+- Status indicators
+
+Ensure meaningful text follows the project's
+minimum 16px typography requirement.
+
+Preserve:
+- Readable color contrast
+- Visible keyboard focus
+- Minimum 44px interactive targets
+- Semantic HTML5
+- Exactly one h1
+- Correct accessible labels
+
+Use screen-specific CSS only.
+
+Do not modify styles/base.css.
+
+==================================================
+3. PRESERVE SCREEN 3 CONTENT
+==================================================
+
+Keep:
+- Request ID: REQ-2026-8841
+- Sender: Nguyet
+- Receiver: Hoang
+- Approver: Minh
+- Shift date: 2026-10-24
+- Shift time: 07:00–15:30
+- Historical sample-state wording
+- Decision guidance
+- Optional rejection reason
+- Illustrative Approve and Reject controls
+
+Do not implement JavaScript, backend functionality,
+persistence, real conflict checking, or fake success
+messages.
+
+==================================================
+4. UPDATE AI-LOG.md
+==================================================
+
+Review the existing Screen 3 implementation entry.
+
+Update it to reflect this actual refinement session.
+
+Record:
+- Tool: Codex 5.6 Sol
+- The final refinement request
+- The changes actually implemented
+- Header and typography decisions
+- Accessibility improvements
+- What was kept from the original implementation
+- Any genuinely rejected suggestions and their reasons
+- Actual manual team-leader review and decisions
+- Checks performed and checks still pending
+
+Follow the course format:
+
+## YYYY-MM-DD — Screen 3: Review & Approve
+
+**Tool:**
+**Asked for:**
+**Kept:**
+**Changed:**
+**Rejected:**
+**By hand:**
+
+Preserve the existing implementation history.
+
+If this refinement is part of the same Screen 3 work,
+update the existing entry rather than duplicating it.
+Create a separate dated entry only if it documents a
+meaningfully distinct task.
+
+If no genuine rejection occurred, write:
+"No documented rejection."
+
+Do not invent:
+- Rejected suggestions
+- Manual contributions
+- Browser test results
+- W3C validation
+- Screenshot evidence
+- Git commits or Pull Request approvals
+
+Existing browser-review results may be mentioned as
+earlier evidence, but do not assume they remain valid
+after the latest source changes.
+
+==================================================
+5. UPDATE brief.md
+==================================================
+
+Preserve all existing verified original prompts verbatim.
+
+Update the chronological Prompt History to include
+this final Screen 3 refinement task.
+
+Append the complete original user-submitted prompt
+for this refinement exactly once under:
+
+### 4.10 Screen 3 Final UI Refinement and Documentation
+
+Record:
+- Tool: Codex 5.6 Sol
+- Task type: UI refinement and documentation update
+- Scope: Screen 3 HTML/CSS, AI-LOG.md, brief.md
+- Original submitted prompt, verbatim
+
+The current user-submitted instruction is the source
+for this prompt record.
+
+Do not reconstruct or paraphrase an original prompt.
+If any earlier original prompt is unavailable,
+label it as unavailable rather than inventing it.
+
+Preserve the existing heading:
+
+## 5. Verification Status
+
+Update the verification information only according
+to actual evidence.
+
+Do not claim final responsive, keyboard, accessibility,
+W3C, or screenshot acceptance without evidence.
+
+==================================================
+6. CROSS-DOCUMENT CONSISTENCY
+==================================================
+
+Ensure AI-LOG.md and brief.md accurately reflect:
+
+- Screen 3 initial implementation
+- Follow-up corrections for historical sample data
+- Final header and typography refinement
+- Actual AI-assisted work
+- Actual team-leader contributions
+- Pending manual verification
+- Current Git state
+
+Do not overwrite valid earlier records.
+
+Avoid duplicated entries or contradictory claims.
+
+==================================================
+7. STRICT FILE SCOPE
+==================================================
+
+You may modify ONLY:
+
+1. review-and-approve.html
+2. styles/screen-3.css
+3. AI-LOG.md
+4. brief.md
+
+Do not modify:
+- AGENTS.md
+- styles/base.css
+- index.html
+- respond-to-request.html
+- PROTOTYPE.md
+- SELF_ASSESSMENT_REPORT.md
+- Any images
+- Screenshots or validation evidence
+- Any other files
+
+Do not stage, commit, push, merge, reset,
+restore, or switch Git branches.
+
+All Git operations belong to the team leader.
+
+==================================================
+8. FINAL VERIFICATION AND REPORT
+==================================================
+
+After making changes:
+
+1. Inspect the HTML and CSS changes.
+2. Check for broken links and encoding issues.
+3. Check potential responsive overflow.
+4. Verify Markdown headings and code fences.
+5. Confirm original prompts were preserved.
+6. Check AI-LOG and brief consistency.
+7. Run git diff --check.
+8. Run git diff --stat.
+9. Confirm only the four authorized files were changed
+   by this task.
+
+Do not claim browser or W3C validation passed
+unless those checks were actually executed.
+
+Report:
+
+A. Screen 3 Changes
+B. Header and Typography Improvements
+C. AI-LOG.md Updates
+D. brief.md Updates
+E. Checks Performed
+F. Remaining Manual Verification
+G. Git Diff Summary
+
+Stop after implementation for team leader review.
+```
+
 ## 5. Verification Status
 
 | Check | Status | Evidence required |
 |---|---|---|
-| Responsive at 360px / 768px / 1280px | Pending | Render and inspect each completed HTML page |
+| Responsive at 360px / 768px / 1280px | Pending | Earlier Screen 3 inspection covered 768px and 1280px; final refinement requires recheck, reliable 360px remains pending, and Screens 1–2 are empty |
 | JavaScript-disabled content and navigation | Pending | Test main flow with JavaScript disabled |
 | Horizontal overflow and clipped content | Pending | Browser measurements and visual checks at each width |
-| W3C HTML validation | Pending | `checks/validator-<page>.png` or `.txt` for all three pages |
+| W3C HTML validation | Partial evidence | The refined Screen 3 HTML returned no W3C Nu messages; retained evidence and incomplete Screens 1–2 remain pending |
 | Accessibility and keyboard navigation | Pending | Landmarks, labels, heading outline, focus, contrast checks |
-| Relative links | Pending | Click each main-flow link in local files |
+| Relative links | Pending | Screen 3 links are present, but `index.html` and `respond-to-request.html` remain empty |
 | Nine screenshots | Pending | `screenshots/<page>-360.png`, `-768.png`, `-1280.png` |
 
-**Repository and documentation status:** The current branch is `main` at `8b92f6a` and matches `origin/main`. Project-rule changes (`a718c63`), revised wireframes (`69f85b7`), the two target filename renames (`870519c`), and the shared CSS foundation (`8b92f6a`) are committed. Despite the `feat: implement PA2 prototype pages` message on `870519c`, that commit contains only two zero-content renames; all three HTML pages and three screen-specific stylesheets remain empty. `brief.md`, `AI-LOG.md`, `PROTOTYPE.md`, and `SELF_ASSESSMENT_REPORT.md` currently have unstaged documentation changes. There are no staged or untracked files.
+**Repository and documentation status:** `HEAD` is documentation commit `933f48c` on `feat/screen-3-approver`; local `main` and `origin/main` also point to `933f48c`. Six files have staged changes: the four documentation files and both Screen 3 source files. Final refinement changes are additionally unstaged in `review-and-approve.html`, `styles/screen-3.css`, `AI-LOG.md`, and `brief.md`; staged `PROTOTYPE.md` and `SELF_ASSESSMENT_REPORT.md` changes were not modified by this refinement task. Screens 1 and 2 and their screen-specific stylesheets remain empty. Commit `870519c` contains only two zero-content renames despite its title.
 
-**Source integrity:** The three original PA#1 screenshots remain tracked in `docs/pa1/`. Three approved revised exports are tracked separately in `docs/revised-wireframes/`; they add explicit actor roles and correct the historical Screen 3 request ID from `REQ-2024-8841` to `REQ-2026-8841`. The HTML pages do not yet implement these designs.
+**Source integrity:** Original PA#1 references remain tracked in `docs/pa1/`, and approved revised exports remain tracked separately in `docs/revised-wireframes/`. Screen 3 now implements the revised actor roles, `REQ-2026-8841`, request details, and illustrative decision interface. Its follow-up corrections explicitly mark historical approval checks as sample data rather than live results.

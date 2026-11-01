@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Review an accepted ShiftNest shift transfer request before final approval.">
+    <title>Review &amp; Approve Transfer | ShiftNest</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/screen-3.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-brand" href="index.html" aria-label="ShiftNest — Send Transfer Request">
+          <span class="brand-mark" aria-hidden="true">⇄</span>
+          <span>ShiftNest</span>
+        </a>
+        <span class="store-label">My Store</span>
+
+        <nav class="site-nav" aria-label="Transfer workflow">
+          <ol class="site-nav__list">
+            <li><a class="site-nav__link" href="index.html">Send Request</a></li>
+            <li><a class="site-nav__link" href="respond-to-request.html">Respond to Request</a></li>
+            <li><a class="site-nav__link" href="review-and-approve.html" aria-current="page">Review &amp; Approve</a></li>
+          </ol>
+        </nav>
+
+        <p class="current-user"><strong>Minh</strong><span aria-hidden="true"> · </span>Shift Leader</p>
+      </div>
+    </header>
+
+    <main class="approval-page">
+      <div class="content-container">
+        <header class="page-intro">
+          <p class="eyebrow">Step 3 of 3 · Review &amp; Approve</p>
+          <p class="actor-label">Minh — Shift Leader / Approver</p>
+          <h1>Review Shift Transfer</h1>
+          <p class="page-summary">Review the accepted transfer request before making the final decision.</p>
+        </header>
+
+        <article class="approval-card" aria-labelledby="transfer-details-heading">
+          <header class="approval-card__header">
+            <div>
+              <h2 id="transfer-details-heading">Transfer Details</h2>
+              <p class="request-id">Request ID: <strong>REQ-2026-8841</strong></p>
+            </div>
+            <p class="status status--warning"><span aria-hidden="true">●</span> Awaiting final approval</p>
+          </header>
+
+          <section class="approval-section" aria-labelledby="transfer-path-heading">
+            <h3 id="transfer-path-heading" class="section-label">Transfer path</h3>
+            <div class="transfer-path">
+              <div class="person">
+                <span class="person__initial" aria-hidden="true">N</span>
+                <div>
+                  <span class="person__role">Sender</span>
+                  <strong>Nguyet</strong>
+                </div>
+              </div>
+              <span class="transfer-arrow" aria-hidden="true">→</span>
+              <div class="person">
+                <span class="person__initial" aria-hidden="true">H</span>
+                <div>
+                  <span class="person__role">Receiver</span>
+                  <strong>Hoang</strong>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="approval-section" aria-labelledby="shift-details-heading">
+            <h3 id="shift-details-heading" class="section-label">Shift details</h3>
+            <div class="detail-grid">
+              <div class="detail-panel">
+                <p class="detail-label">Shift</p>
+                <p class="detail-primary"><time datetime="2026-10-24">Saturday, October 24, 2026</time></p>
+                <p><time datetime="07:00">07:00</time>–<time datetime="15:30">15:30</time></p>
+              </div>
+              <div class="detail-panel">
+                <p class="detail-label">Illustrative approval checks</p>
+                <p class="detail-primary">Receiver accepted <span class="sample-qualifier">(sample state)</span></p>
+                <ul class="check-list">
+                  <li>At the time represented, the shift had not started</li>
+                  <li>Receiver account was shown as active</li>
+                  <li>No overlapping shifts were shown</li>
+                </ul>
+                <p class="sample-note">Historical sample data from the approved wireframe, not live validation results.</p>
+              </div>
+            </div>
+
+            <div class="detail-panel availability-panel">
+              <p class="detail-label">Illustrative availability &amp; opening-hours check</p>
+              <p><span aria-hidden="true">●</span> Sample result: no availability or opening-hours warnings.</p>
+            </div>
+
+            <div class="reason-block">
+              <p class="reason-heading">Reason for transfer</p>
+              <p>Attending a latte art workshop. Could you cover my opening shift?</p>
+            </div>
+          </section>
+
+          <section class="decision-section" aria-labelledby="decision-heading">
+            <h3 id="decision-heading">Decision guidance</h3>
+            <p>Only an uninvolved Shift Leader or Manager may decide. In a production system, approval would recheck eligibility and conflicts; errors would block approval and warnings would require confirmation. <strong>Nguyet remains assigned until final approval.</strong></p>
+
+            <form class="decision-form" action="#" method="get">
+              <div class="form-group">
+                <label class="form-label" for="rejection-reason">Optional rejection reason</label>
+                <textarea class="form-control" id="rejection-reason" name="rejection-reason" rows="3" placeholder="Enter reason"></textarea>
+              </div>
+
+              <p class="form-hint" id="action-note">Illustrative controls only. Decisions are not submitted or saved in this static prototype.</p>
+
+              <div class="decision-actions">
+                <button class="button button--outline" type="button" aria-describedby="action-note">Reject</button>
+                <button class="button" type="button" aria-describedby="action-note">Approve Transfer</button>
+              </div>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>ShiftNest static prototype · Screen 3 of 3</p>
+      </div>
+    </footer>
+  </body>
+</html>
